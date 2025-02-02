@@ -37,7 +37,7 @@ export default function AdminPanel() {
     <main className="flex-1 p-4 md:p-6 md:ml-64 z-10 overflow-auto">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="flex flex-col gap-4 md:flex-row justify-between items-start md:items-center mb-6 md:mb-8 md:pt-14">
+        <div className="flex flex-col gap-4 md:flex-row justify-between items-start md:items-center mb-6 md:mb-8 pt-14">
           <h1 className="text-2xl md:text-4xl font-bold text-gray-800 font-[Poppins] tracking-tight">
             Product Management
           </h1>
