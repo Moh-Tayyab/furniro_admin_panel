@@ -11,14 +11,14 @@ const DataFetching = () => {
 
   try {
     const dataFetching = async () => {
-      const query = `*[_type == "product"]{
+      const query = `*[_type == "myproduct"]{
        name,
        tags,
        price,
        stock,
        dimensions,
        id,
-       description,S
+       description,
        discount,
        originalPrice,
        "categoryName": category->name,
