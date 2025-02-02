@@ -90,7 +90,7 @@ const Categories = () => {
       <div className="w-full max-w-6xl space-y-8 py-12">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent mb-6">
             Inventory Analytics
             <span className="ml-4 text-2xl">📊</span>
           </h1>

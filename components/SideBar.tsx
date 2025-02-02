@@ -23,7 +23,7 @@ const SideBar = () => {
     <div className="z-50">
       {/* Mobile Header */}
       {!sidebarOpen && (
-        <div className="flex items-center justify-between p-4 bg-gradient-to-r from-[#1a1a1a] to-[#2d2d2d] text-white h-full w-64 fixed top-0 left-0 z-10 md:hidden shadow-xl">
+        <div className="flex items-center justify-between p-4 bg-gradient-to-r from-[#1a1a1a] to-[#2d2d2d] text-white h-16 w-full fixed top-0 left-0 z-10 md:hidden shadow-xl ">
           <h1 className="text-xl font-semibold font-[Poppins] tracking-wide">Furniro Admin</h1>
           <button
             onClick={() => setSidebarOpen(true)}
@@ -38,19 +38,19 @@ const SideBar = () => {
       <aside
         className={`${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } md:translate-x-0 transform fixed top-0 left-0 w-64 bg-gradient-to-b from-[#1a1a1a] to-[#0f0f0f] text-white h-full transition-transform duration-300 z-20 shadow-2xl`}
+        } md:translate-x-0 transform fixed top-0 left-0 w-64 md:w-64 bg-gradient-to-b from-[#1a1a1a] to-[#0f0f0f] text-white h-full transition-transform duration-300 z-30 shadow-2xl`}
       >
-        <div className="flex justify-between items-center px-6 py-6 border-b border-white/10 ">
-          <div className="flex items-center gap-4">
+        <div className="flex justify-between items-center px-4 md:px-6 py-4 md:py-6 border-b border-white/10">
+          <div className="flex items-center gap-2 md:gap-4">
             <Image 
               src="/logo1.png" 
               alt="Logo" 
-              width={48} 
-              height={48}
+              width={32} 
+              height={32}
               className="rounded-lg shadow-md"
             />
             <Link href="/">
-              <h1 className="text-2xl font-bold font-[Poppins] tracking-wide text-amber-400">
+            <h1 className="text-2xl font-bold font-[Poppins] tracking-wide text-amber-400">
                 Furniro
               </h1>
             </Link>
@@ -63,17 +63,17 @@ const SideBar = () => {
           </button>
         </div>
 
-        <nav className="flex flex-col p-4 gap-1 mt-2">
+        <nav className="flex flex-col p-4 gap-1 mt-2 overflow-y-auto">
           <Link 
             href="/admin" 
             className="flex items-center gap-4 hover:bg-white/5 p-3 rounded-xl transition-all duration-300 group"
           >
             <div className="p-2 bg-amber-400/10 rounded-lg group-hover:bg-amber-400/20 transition-colors">
-              <ThemedIcon icon = {FaChartBar} 
-              className="w-5 h-5 text-amber-400" />
+              <ThemedIcon icon={FaChartBar} className="w-5 h-5 text-amber-400" />
             </div>
-            <span className="font-medium tracking-wide">Dashboard</span>
+            <span className="font-medium tracking-wide text-sm md:text-base">Dashboard</span>
           </Link>
+
 
           <Link 
             href="/admin/product" 
@@ -133,7 +133,7 @@ const SideBar = () => {
       {sidebarOpen && (
         <div
           onClick={() => setSidebarOpen(false)}
-          className="fixed inset-0 bg-black/70 backdrop-blur-sm md:hidden"
+          className="fixed inset-0 bg-black/70 backdrop-blur-sm md:hidden z-20"
         ></div>
       )}
     </div>
