@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ConditionalSideBar from "./components/ConditionalSideBar";
+import ConditionalSideBar from "../components/ConditionalSideBar";
 import DataFetching from "@/DataFetching";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Admin Panel",
-  description: "Furniro Admin Panel",
+  title: "Furniro Admin",
+  description: "Furniro: A cutting-edge eCommerce platform...",
+  icons: {
+    icon: [
+      { url: "/logo1.png", sizes: "16x16" },
+      { url: "/logo1.png", sizes: "32x32" },
+      { url: "/logo1.png", sizes: "96x96" }
+    ]
+  }
 };
+
 
 export default function RootLayout({
   children,
